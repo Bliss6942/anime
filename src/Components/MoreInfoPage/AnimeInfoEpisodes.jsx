@@ -27,7 +27,7 @@ const AnimeInfoEpisodes = ({episodeInfo, id, show, currentWidth, isManga}) => {
         <>
           {episodeInfo?.map(item => <Link key={item?.id} to={`/read/${id}?chapter=${episodeInfo?.findIndex(findItem => findItem === item)}`} className='py-2 border-b-[1px] border-b-silver/20 w-full flex justify-between items-center'>
             <div>{`Chapter ${item?.chapterNumber ? item?.chapterNumber : "?"} ${item?.title ? `- ${item?.title}` : ""}`}</div>
-            <div className='flex-shrink-0'>{item?.pages} pgs.</div>
+            <div className='flex-shrink-0'>{item?.pages} стр.</div>
           </Link>)}
         </>
       :

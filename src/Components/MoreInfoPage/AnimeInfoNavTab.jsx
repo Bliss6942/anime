@@ -32,7 +32,7 @@ const AnimeInfoNavTab = ({ isFirstPart, full, changeOpenedBlock, currentWidth, i
             change(0)
           }}
         >
-          Overview
+          Обзор
         </button>
         <button
           className={`${
@@ -61,7 +61,7 @@ const AnimeInfoNavTab = ({ isFirstPart, full, changeOpenedBlock, currentWidth, i
 
           }}
         >
-          Characters
+          Персонажи
         </button>
         <button
           className={`${
@@ -78,7 +78,7 @@ const AnimeInfoNavTab = ({ isFirstPart, full, changeOpenedBlock, currentWidth, i
 
           }}
         >
-          Relations
+          Продолжения
         </button>
       </div>
       <div className="bg-text-gray/50 h-[2px] w-full 400res:w-full mb-[52px] ">

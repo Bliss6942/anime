@@ -117,17 +117,17 @@ const ReadPage = () => {
     }, [currentPagedStyle]) 
                 
     if(preloader) return <PreloaderComponent isLoaded={isLoading}/>
-    else if(fetchError) return <div className='text-4xl text-white'>ERROR WHILE FETCHING TRY AGAIN LATER <button onClick={() => history.back()} className='btn-base'>BACK</button></div>
+    else if(fetchError) return <div className='text-4xl text-white'>Ошибка запроса попробуйте снова чуть позже<button onClick={() => history.back()} className='btn-base'>BACK</button></div>
     return (
         <div className='opacity-0 animate-fadeInAnimate fill-mode-forward w-[1160px] mx-auto 1200res:!w-full 1200res:!px-5 flex flex-col items-center py-16'>
             <div className='w-full flex items-start flex-col gap-10 mb-3'>
-                <h2 className='text-3xl'>{mangaInfo?.title?.english ? mangaInfo?.title?.english : mangaInfo?.title?.romaji} - Chapter {currentChapter}</h2>
+                <h2 className='text-3xl'>{mangaInfo?.title?.english ? mangaInfo?.title?.english : mangaInfo?.title?.romaji} - Глава {currentChapter}</h2>
                 <div className='text-text-gray [&>a]:duration-200'>
-                    <Link className='hover:text-white' to={"/"}>Home</Link>
+                    <Link className='hover:text-white' to={"/"}>Главная</Link>
                     <span> / </span>
                     <Link className='hover:text-white' to={`/more-info/${id}`}>{mangaInfo?.title?.english ? mangaInfo?.title?.english : mangaInfo?.title?.romaji}</Link>
                     <span> / </span>
-                    <span>Chapter {currentChapter} - {mangaInfo?.chapters[currentChapterIndex]?.title}</span>
+                    <span>Глава {currentChapter} - {mangaInfo?.chapters[currentChapterIndex]?.title}</span>
                 </div>
             </div>
             <MangaPagination

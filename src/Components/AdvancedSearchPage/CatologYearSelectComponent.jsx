@@ -7,7 +7,7 @@ const CatologYearSelectComponent = ({setYearOpened, yearOpened, setYearValue, ch
       className="flex justify-between py-5 w-full items-center cursor-pointer border-b-2 border-b-white/10 mb-6 "
       onClick={() => setYearOpened(!yearOpened)}
     >
-      <span className="font-medium">Year</span>
+      <span className="font-medium">Год</span>
       <span>
         <svg
           className={`${

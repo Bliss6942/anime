@@ -19,53 +19,53 @@ const AdvancedSearchPage = () => {
   const [isLoaded, setIsLoaded] = useState(true)
 
   const [seasons, setSeasons] = useState([
-    {title: "Winter", id: "WINTER"},
-    {title: "Spring", id: "SPRING"},
-    {title: "Summer", id: "SUMMER"},
-    {title: "Fall", id: "FALL"},
+    {title: "Зима", id: "WINTER"},
+    {title: "Весна", id: "SPRING"},
+    {title: "Лето", id: "SUMMER"},
+    {title: "Осень", id: "FALL"},
   ])
   const [genres, setGenres] = useState([
     "Action", 
-    "Adventure", 
-    "Cars", 
-    "Comedy", 
-    "Drama", 
-    "Fantasy", 
-    "Horror", 
+    "Приключение", 
+    "Машины", 
+    "Комедия", 
+    "Драма", 
+    "Фэнтези", 
+    "Хоррор", 
     "Mahou Shoujo", 
-    "Mecha", 
-    "Music", 
-    "Mystery", 
-    "Psychological", 
-    "Romance", 
+    "Меха", 
+    "Музыка", 
+    "Мистика", 
+    "Психология", 
+    "Романтика", 
     "Sci-Fi", 
-    "Slice of Life", 
-    "Sports", 
-    "Supernatural",
-    "Thriller"
+    "Часть из жизни", 
+    "Спорт", 
+    "Сверхестественное",
+    "Триллер"
   ])
   const [formats, setFormats] = useState([
     {title: "TV", id: "TV"},
     {title: "TV Short", id: "TV_SHORT"},
     {title: "OVA", id: "OVA"},
     {title: "ONA", id: "ONA"},
-    {title: "Movie", id: "MOVIE"},
-    {title: "Special", id: "SPECIAL"},
-    {title: "Music", id: "MUSIC"},
+    {title: "Фильм", id: "MOVIE"},
+    {title: "Спешл", id: "SPECIAL"},
+    {title: "Музыка", id: "MUSIC"},
   ])
   const [airingStatus, setAiringStatus] = useState([
-    {title: "Releasing", id: "RELEASING"},
-    {title: "Not Yet Released", id: "NOT_YET_RELEASED"},
-    {title: "Finished", id: "FINISHED"},
-    {title: "Cancelled", id: "CANCELLED"},
-    {title: "Hiatus", id: "HIATUS"},
+    {title: "Выпускается", id: "RELEASING"},
+    {title: "Еще не выпущен", id: "NOT_YET_RELEASED"},
+    {title: "Закончен", id: "FINISHED"},
+    {title: "Закрыт", id: "CANCELLED"},
+    {title: "Перерыв", id: "HIATUS"},
   ])
   const [sort, setSort] = useState([
-    {title: "Popularity", id: '["POPULARITY_DESC"]'},
-    {title: "Newest", id: '["START_DATE_DESC","POPULARITY_DESC"]'},
-    {title: "Rating", id: '["SCORE_DESC","POPULARITY_DESC"]'},
-    {title: "Name (A-Z)", id: '["TITLE_ROMAJI","POPULARITY_DESC"]'},
-    {title: "Name (Z-A)", id: '["TITLE_ROMAJI_DESC","POPULARITY_DESC"]'},
+    {title: "Популярность", id: '["POPULARITY_DESC"]'},
+    {title: "Новизна", id: '["START_DATE_DESC","POPULARITY_DESC"]'},
+    {title: "Рейтинг", id: '["SCORE_DESC","POPULARITY_DESC"]'},
+    {title: "Название (А-Я)", id: '["TITLE_ROMAJI","POPULARITY_DESC"]'},
+    {title: "Название (Я-А)", id: '["TITLE_ROMAJI_DESC","POPULARITY_DESC"]'},
   ])
 
   const [selectedSeason, setSelectedSeason] = useState("")

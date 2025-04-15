@@ -111,13 +111,13 @@ const EditProfile = ({currentWidth}) => {
 
   return (
     <div className={`${isLoading ? "pointer-events-none" : ""} flex flex-col w-[1440px] 1480res:w-full mx-auto 1480res:pl-5 600res:pl-0`}>
-        <h2 className='text-4xl font-medium my-10 500res:text-3xl'>Edit profile</h2>
+        <h2 className='text-4xl font-medium my-10 500res:text-3xl'>Настроить профиль</h2>
         <div className='mb-5'>
           <div className='text-sm text-white/70 mb-2'>{`Avatar ( max 1000x1000 )`}</div>
           <div className='flex gap-4 items-center'>
           <span style={{ backgroundImage: `url(${newAvatar})` }} className='bg-center bg-no-repeat bg-cover flex-shrink-0 rounded-full w-[90px] h-[90px]'/>            <div className='flex flex-col gap-2 items-center'>
               <div className={`${imageIsLoading || isLoading ? "btn-disabled" : ""} relative btn-base bg-white text-def-black w-min h-min !rounded-3xl 500res:!text-sm 500res:p-3`}>
-                <span>Change</span>
+                <span>Изменить</span>
                 <input accept='image/jpeg, image/png, image/gif' className='w-full h-full absolute top-0 left-0 opacity-0 cursor-pointer' type="file" onChange={e => handleChangeImage(e, setNewAvatar, false)}/>
               </div>
               <span className='text-sm text-white/70 500res:text-xs'>{"Img only"}</span>
@@ -130,7 +130,7 @@ const EditProfile = ({currentWidth}) => {
               className={`${currentWidth <= 1000 ? "600res:!h-[93px]" : "!h-[137px]"} 1000res:w-full w-[800px] rounded-md bg-center bg-cover bg-no-repeat`}></div>
             <div className='flex flex-col gap-2 items-center'>
               <div className={`${imageIsLoading || isLoading ? "btn-disabled" : ""} relative btn-base bg-white text-def-black w-min h-min !rounded-3xl 500res:!text-sm 500res:p-3`}>
-                <span>Change</span>
+                <span>Изменить</span>
                 <input accept='image/jpeg, image/png, image/gif' className='w-full h-full absolute top-0 left-0 opacity-0 cursor-pointer' type="file" onChange={e => handleChangeImage(e, setNewCover, true)}/>
               </div>
               <span className='text-sm text-white/70 500res:text-xs'>{"Img only"}</span>
@@ -161,7 +161,7 @@ const EditProfile = ({currentWidth}) => {
                 }
                 handleResetChanges()
               }}
-            >Reset</button>
+            >Сбросить</button>
           </div>
           {patchResponse ?
             <div className={`${patchResponse.status === 200 ? "bg-green-500" : "bg-red-500"} opacity-0 animate-fadeInAnimate fill-mode-forward rounded-md p-3 my-2`}>{patchResponse?.status === 200 ?

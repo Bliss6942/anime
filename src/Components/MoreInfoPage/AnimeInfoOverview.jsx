@@ -7,10 +7,10 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
     <div style={{display: `${show ? "flex" : "none"}`}} className=' flex 1480res:gap-12 gap-24 900res:flex-col 900res:gap-10 pr-5 1480res:pr-10 1480res:pl-5 '>
         <div className='flex flex-col flex-wrap gap-6 [&>div>div]:flex [&>div>div]:w-[340px] [&>div>div]:370res:w-full [&_span]:370res:text-sm [&_span]:w-[100px]
         [&_span]:flex-shrink-0 [&_span]:text-text-gray [&_p]:370res:text-sm [&_p]:font-light'>
-            <h3 className='text-2xl font-medium 370res:text-[20px]'>Details</h3>
+            <h3 className='text-2xl font-medium 370res:text-[20px]'>Подробности</h3>
             <div className='flex flex-col gap-5 370res:gap-4 900res:flex-row flex-wrap'>
                 <div>
-                    <span>Type</span>
+                    <span>Тип</span>
                     {MALInfo ?
                         <p>{MALInfo?.type}</p>
                     :
@@ -20,18 +20,18 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
                 <div>
                     {isManga ?
                         <>
-                            <span>Chapters</span>
+                            <span>Персонажи</span>
                             <p>{animeInfo?.chapters?.length}</p>
                         </>
                     :
                         <>
-                            <span>Episodes</span>
+                            <span>Эпизоды</span>
                             <p>{animeInfo?.totalEpisodes}</p>
                         </>
                     }
                 </div>
                 <div>
-                    <span>Genres</span>
+                    <span>Жанры</span>
                     <p>{animeInfo?.genres?.map((item, i) => {
                         if(i+1 === animeInfo?.genres.length) return `${item}`
                         return `${item}, `
@@ -40,7 +40,7 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
                 <div>
                     {isManga ?
                         <>
-                            <span>Published</span>
+                            <span>Опубликовано</span>
                             {MALInfo ?
                                 <p>{MALInfo?.published?.string}</p>
                             :
@@ -49,7 +49,7 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
                         </>
                     :
                         <>
-                            <span>Aired</span>
+                            <span>Вышло в свет</span>
                             {MALInfo ?
                                 <p>{MALInfo?.aired?.string}</p>
                             :
@@ -59,7 +59,7 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
                     }
                 </div>
                 <div>
-                    <span>Status</span>
+                    <span>Статус</span>
                     {MALInfo ?
                         <p>{!MALInfo?.status ? "?" : MALInfo?.status}</p>
                     :
@@ -67,7 +67,7 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
                     }
                 </div>
                 <div>
-                    <span>Season</span>
+                    <span>Сезон</span>
                     {isManga ?
                         <p className='first-letter:uppercase'>{animeInfo?.season ? animeInfo?.season : "?"}</p>
                     :
@@ -81,7 +81,7 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
                 <div>
                     {isManga ? 
                         <>
-                            <span>Author</span>
+                            <span>Автор</span>
                             {MALInfo ?
                                 <p>{MALInfo?.authors?.map((item, i) => {
                                     if(i+1 === MALInfo?.authors.length) return `${item?.name}`
@@ -96,7 +96,7 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
                         </>
                     :
                         <>
-                            <span>Studios</span>
+                            <span>Студия</span>
                             {MALInfo ?
                                 <p>{MALInfo?.studios?.map((item, i) => {
                                     if(i+1 === MALInfo?.studios.length) return `${item?.name}`
@@ -116,7 +116,7 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
                         <>
                             {MALInfo ?
                                 <>
-                                    <span>Approved</span>
+                                    <span>Одобрено</span>
                                     <p>{MALInfo?.approved ? "Yes" : "No"}</p>
                                 </>
                             :
@@ -127,7 +127,7 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
                         <>
                             {MALInfo ?
                                 <>
-                                    <span>Source</span>
+                                    <span>Источник</span>
                                     <p>{!MALInfo?.source ? "?" : MALInfo?.source}</p>
                                 </>
                             :
@@ -139,18 +139,18 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
                 <div className={`${isManga ? "!hidden" : ""}`}>
                     {MALInfo ?
                         <>
-                            <span>Rating</span>
+                            <span>Рейтинг</span>
                             <p>{!MALInfo?.rating ? "?" : MALInfo.rating}</p>
                         </>
                     :
                         <>
-                            <span>Is Adult</span>
+                            <span>Для взрослых</span>
                             <p>{!animeInfo?.isAdult ? "?" : animeInfo.isAdult}</p>
                         </>
                     }
                 </div>
                 <div className={`${isManga ? "!hidden" : ""}`}>
-                    <span>Duration</span>
+                    <span>Продолжительность</span>
                     {MALInfo ?
                         <p>{!MALInfo?.duration ? '?' : MALInfo?.duration}</p>
                     :
@@ -160,7 +160,7 @@ const AnimeInfoOverview = ({animeInfo, MALInfo, MALWork, show, isManga}) => {
             </div>
         </div>
         <div>
-            <h3 className='text-2xl mb-6 font-medium 370res:text-[20px]'>Desription</h3>
+            <h3 className='text-2xl mb-6 font-medium 370res:text-[20px]'>Описание</h3>
             <p className={`400res:text-base 370res:text-sm duration-150
             text-text-gray text-lg 370res:!leading-8 !leading-9 text-justify overflow-hidden`} dangerouslySetInnerHTML={{__html: MALInfo ? (moreText ? `${MALInfo?.synopsis}` : `${MALInfo?.synopsis?.slice(0, 400)}`) : (moreText ? `${animeInfo?.description}` : `${animeInfo?.description?.slice(0, 400)}`)}}></p>
             {MALInfo ?

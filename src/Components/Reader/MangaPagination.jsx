@@ -16,7 +16,7 @@ const MangaPagination = ({handleNext, handlePrev, setCurrentChapterIndex, curren
                 >
                     {mangaInfo?.chapters?.map((item, i) => (
                         <option key={item?.id} value={i}>
-                            Chapter {item?.chapterNumber}
+                            Глава {item?.chapterNumber}
                         </option>
                     ))}
                     
@@ -40,8 +40,8 @@ const MangaPagination = ({handleNext, handlePrev, setCurrentChapterIndex, curren
                         setCurrentPagedStyle(e.target.value)
                     }}
                 >
-                    <option value="paged">Paged style</option>
-                    <option value="list">List style</option>
+                    <option value="paged">Страница</option>
+                    <option value="list">Лист</option>
                 </select>
                 <span className='absolute right-[5px] top-1/2 -translate-y-1/2 '>
                     <svg className='w-[12px]' xmlns="http://www.w3.org/2000/svg" version="1.0" width="16.000000pt" height="16.000000pt" viewBox="0 0 16.000000 16.000000" preserveAspectRatio="xMidYMid meet">
@@ -101,13 +101,13 @@ const MangaPagination = ({handleNext, handlePrev, setCurrentChapterIndex, curren
                             />
                         </svg>
                     </span>
-                    <span>Prev</span>
+                    <span>Пред</span>
                 </a>
                 <a href='#img'
                     className='btn-base 600res:!p-2 bg-white text-def-gray flex items-center gap-1 !rounded-md !pl-[14px] !pr-[10px] !py-[12px] cursor-pointer'
                     onClick={handleNext}    
                 >
-                    <span>Next</span>
+                    <span>След</span>
                     <span>
                         <svg
                             className={`-rotate-90 w-4 h-4`}

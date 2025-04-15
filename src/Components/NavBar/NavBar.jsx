@@ -128,7 +128,7 @@ const NavBar = () => {
                 }
                 to={"/"}
               >
-                Home
+                Главная
               </NavLink>
             </li>
             <li>
@@ -138,7 +138,7 @@ const NavBar = () => {
                 }
                 to={"/advanced-search"}
               >
-                Catalog
+                Каталог
               </NavLink>
             </li>
             <li>
@@ -152,7 +152,7 @@ const NavBar = () => {
                 }}
                 to={"/news"}
               >
-                Search for Manga
+                Поиск манги
               </span>
             </li>
           </ul>
@@ -163,7 +163,7 @@ const NavBar = () => {
               (user?.isValid ? 
                 <div className='650res:flex hidden items-center justify-center gap-5 500res:gap-3'>
                   <div className='cursor-pointer duration-200 flex items-center justify-center gap-2 font-light text-sm text-silver/70 [&_path]:fill-silver/70 hover:text-white [&_path]:hover:fill-white'>
-                    <span>My Library</span>
+                    <span>Библиотека</span>
                     <span>
                       <svg
                         className={`w-5 h-5`}
@@ -190,11 +190,11 @@ const NavBar = () => {
                 <div className='flex gap-3'>
                     <button onClick={() => {setIsShowLogin(true)}}
                     className="650res:block hidden text-sm py-[10px] px-3 bg-def-black-gray rounded-lg font-medium text-white cursor-pointer">
-                      Log in
+                      Войти
                     </button>
                     <button onClick={() => {setIsShowRegistration(true)}}
                     className="650res:block hidden text-sm py-[10px] px-3 bg-white rounded-lg font-medium text-def-black cursor-pointer">
-                      Get started
+                      Регистрация
                     </button>
                 </div>)
             }
@@ -276,7 +276,7 @@ const NavBar = () => {
             (user?.isValid ? 
               <div className='flex items-center justify-center gap-7 1200res:gap-5 650res:hidden'>
                 <div className='cursor-pointer duration-200 flex items-center justify-center gap-2  text-silver/70 [&_path]:fill-silver/70 hover:text-white [&_path]:hover:fill-white'>
-                  <span>My Library</span>
+                  <span>Библиотека</span>
                   <span>
                     <svg
                       className={`w-5 h-5`}
@@ -303,11 +303,11 @@ const NavBar = () => {
               <div className="flex gap-3 items-center 650res:hidden">
                 <button onClick={() => {setIsShowLogin(true)}}
                 className="btn-base bg-def-black-gray text-white cursor-pointer">
-                  Log in
+                  Войти
                 </button>
                 <button onClick={() => {setIsShowRegistration(true)}}
                 className="btn-base bg-white text-def-black cursor-pointer">
-                  Get started
+                  Регистрация
                 </button>
               </div>
             )

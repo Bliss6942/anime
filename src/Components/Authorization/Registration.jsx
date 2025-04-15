@@ -43,18 +43,18 @@ const Registration = ({isShow, close, toggleAuth}) => {
 
     return (
         <PopUpModal isShow={isShow} isLoading={isLoading} isUserLoading={user?.isLoading} close={close}>
-            <h4 className='font-medium text-[28px] text-white mb-4 370res:text-xl'>Create an Account</h4>
+            <h4 className='font-medium text-[28px] text-white mb-4 370res:text-xl'>Создать аккаунт</h4>
             <div className={`${errorText ? "" : "hidden"} bg-red-500 rounded-md p-3 my-2`}>{errorText}</div>
             <div className={`${successText ? "" : "hidden"} bg-green-500 rounded-md p-3 my-2`}>{successText}</div>
             <form onSubmit={e => e.preventDefault()}>
                 <AuthorizationInput type={"text"} placeholder={"cyberpsycho_login"} title={"Login"} setValue={setLogin} value={login}/>
                 <AuthorizationInput type={"text"} placeholder={"cyberpsycho"} title={"Username"} setValue={setName} value={name}/>
                 <AuthorizationInput type={"password"} placeholder={"Your password"} title={"Password"} setValue={setPassword} value={password}/>
-                <button type={'submit'} onClick={signUpHandler} className='w-full btn-base bg-white text-def-black mt-3 cursor-pointer 370res:text-sm'>Sign Up</button>
+                <button type={'submit'} onClick={signUpHandler} className='w-full btn-base bg-white text-def-black mt-3 cursor-pointer 370res:text-sm'>Зарегистрироваться</button>
             </form>
             <div className='flex gap-2 mt-5 370res:text-sm'>
-                <p className='text-white '>Already have an account?</p>
-                <span className='text-green-700 cursor-pointer flex-shrink-0' onClick={toggleAuth}>Log in</span>
+                <p className='text-white '>Уже есть аккаунт?</p>
+                <span className='text-green-700 cursor-pointer flex-shrink-0' onClick={toggleAuth}>Войти</span>
             </div>
         </PopUpModal>
     )

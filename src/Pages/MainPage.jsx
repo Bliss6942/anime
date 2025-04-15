@@ -200,7 +200,7 @@ const MainPage = ({currentWidth}) => {
       <div className="flex flex-col w-def 1480res:w-full 1480res:!mx-5 z-10">
         <div className="">
           <h3 className="w-max text-2xl 1480res:px-[28px] px-2 font-medium mb-5 500res:mb-3 -mt-24 900res:-mt-20 700res:mt-20 500res:mt-16">
-            Trending now
+            Популярно сейчас
           </h3>
           {trendingNow ? (
             <SwiperComponent
@@ -256,7 +256,7 @@ const MainPage = ({currentWidth}) => {
           ) : null}
 
           <h3 className="text-2xl 1480res:px-[28px] px-2 font-medium 500res:mb-3 500res:mt-16 mb-5 mt-20">
-            Most Popular
+            самые популярные
           </h3>
           {popular ? (
             <SwiperComponent
@@ -267,7 +267,7 @@ const MainPage = ({currentWidth}) => {
           ) : null}
 
           <h3 className="text-2xl 1480res:px-[28px] px-2 font-medium 500res:mb-3 500res:mt-16 mb-5 mt-20">
-            Best Score
+            Лучшая оценка
           </h3>
           {bestScore ? (
             <SwiperComponent
@@ -279,7 +279,7 @@ const MainPage = ({currentWidth}) => {
         </div>
         <div className="">
           <h3 className="text-2xl 1480res:px-[28px] px-2 font-medium 500res:mb-3 500res:mt-16 mb-5 mt-20">
-            Coming soon
+            Скорой выйдут
           </h3>
           {upcoming ? (
             <SwiperComponent

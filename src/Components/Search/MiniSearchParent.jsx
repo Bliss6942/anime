@@ -68,7 +68,7 @@ const MiniSearchParent = ({searchValue, typeEnd, setInputFocus, searchManga, set
                   />
               </svg>
             </span>
-            <p>Search for Manga</p>
+            <p>Поиск манги</p>
           </div>
         </div>
         <div

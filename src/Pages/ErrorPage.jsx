@@ -10,9 +10,9 @@ const ErrorPage = ({errorObj = null}) => {
             <h2 className='text-3xl mb-2'>{errorObj ? `${errorObj?.message}` : `404 - Page Not Found`} </h2>
             <p className='text-xl mb-6'>{errorObj ? errorObj?.response?.data?.message : "Wrong page?"}</p>
             {errorObj?.response?.status === 404 || !errorObj || !errorObj?.response?.status ?
-              <Link to={"/"}><button className='btn-base bg-white text-def-black'>TAKE ME HOME</button></Link>
+              <Link to={"/"}><button className='btn-base bg-white text-def-black'>На главную</button></Link>
             :
-              <button onClick={() => location.reload()} className='btn-base bg-white text-def-black'>REFRESH PAGE</button>
+              <button onClick={() => location.reload()} className='btn-base bg-white text-def-black'>Обновить страницу</button>
             }
         </div>
     </div>

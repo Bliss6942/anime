@@ -24,13 +24,13 @@ const SettingsPage = ({currentWidth}) => {
   else if(!user?.isValid) return <ErrorPage errorObj={{message: "401 - Unauthorized", response: {data: {message: "Log in to manage your account."}}}}/>
   return (
     <div className='opacity-0 animate-fadeInAnimate fill-mode-forward w-[1440px] mx-auto 1480res:w-full 1480res:px-5'>
-        <h1 className='text-5xl font-medium mt-10 mb-3 500res:text-4xl'>Settings</h1>
+        <h1 className='text-5xl font-medium mt-10 mb-3 500res:text-4xl'>Настройки</h1>
         <div className='text-text-gray [&>a]:duration-200'>
-            <Link className='hover:text-white' to={"/"}>Home</Link>
+            <Link className='hover:text-white' to={"/"}>Главная</Link>
             <span> / </span>
             <Link className='hover:text-white' to={`/profile/${user?.login}`}>{user?.login}</Link>
             <span> / </span>
-            <span>Settings</span>
+            <span>Настройки</span>
         </div>
         <EditProfile currentWidth={currentWidth}/> 
         <ManageAccount/>
@@ -46,7 +46,7 @@ const SettingsPage = ({currentWidth}) => {
             </clipPath>
             </defs>
           </svg>
-          <div>Log Out</div>
+          <div>Выйти</div>
         </div>
     </div>
   )

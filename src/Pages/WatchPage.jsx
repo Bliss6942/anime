@@ -199,10 +199,10 @@ const WatchPage = () => {
                 } hidden bg-black/50 backdrop-blur-xl gap-3 z-10 absolute top-3 left-1/2 w-max -translate-x-1/2 p-5 items-center rounded-xl flex-col `}
               >
                 <div className="flex gap-3 font-medium">
-                  <p className="text-xl font-medium flex-shrink-0">You stop at:</p>
+                  <p className="text-xl font-medium flex-shrink-0">Вы остановились на:</p>
                   <p className="text-xl font-medium flex gap-2">
                     {historyEpisode}
-                    <p>Episode</p>
+                    <p>Эпизод</p>
                   </p>
                   <p className="text-xl font-medium">
                     {(historyTime / 60).toFixed(0)
@@ -217,7 +217,7 @@ const WatchPage = () => {
                   </p>
                 </div>
                 <div className="flex gap-3 items-center">
-                  <p className="text-xl font-medium">Continue?</p>
+                  <p className="text-xl font-medium">Продолжить?</p>
                   <button className="btn-base bg-white text-black !py-2" onClick={setEpisodeFromHistory}>
                     Yes
                   </button>
@@ -225,7 +225,7 @@ const WatchPage = () => {
                     className="btn-base bg-def-gray text-white !py-2"
                     onClick={() => setWatchBefore(false)}
                   >
-                    Close
+                    Закрыть
                   </button>
                 </div>
               </div>
@@ -243,7 +243,7 @@ const WatchPage = () => {
             </div>
             <div className="hidden 1000res:flex h-14  mt-3 rounded-md  items-center justify-start w-full bg-def-gray px-3">
               <div className="flex items-center h-full">
-                <p>Ep. № </p>
+                <p>Эп. № </p>
                 <form onSubmit={(e) => {
                   e.preventDefault()
                   console.log(e.target[0].value);
@@ -273,7 +273,7 @@ const WatchPage = () => {
                   >
                     {animeInfo?.episodes?.map((item) => (
                       <option className="bg-white/30" value={item.number} key={item?.number}>
-                        {item.number} - Episode
+                        {item.number} - Эпизод
                       </option>
                     ))}
                   </select>
@@ -283,7 +283,7 @@ const WatchPage = () => {
           </div>
           <div className="mt-5 flex flex-col">
             <div className='text-text-gray mb-4 text-lg 500res:text-base 500res:mb-2 400res:text-sm [&>*]:duration-200'>
-              <Link to={`/`} className='hover:text-white'>Home</Link>
+              <Link to={`/`} className='hover:text-white'>Главная</Link>
               <span> / </span>
               <Link to={`/more-info/${animeInfo?.id}`} className='max-w-max hover:text-white'>
                   {(animeInfo?.title?.english ? animeInfo?.title?.english : animeInfo?.title?.romaji)}
@@ -300,7 +300,7 @@ const WatchPage = () => {
               className={`border-t-2 border-t-white/30 pt-12 w-full 
               `}
             >
-              <h3 className="text-3xl mb-8">You'll also like it</h3>
+              <h3 className="text-3xl mb-8">Вам также может понравиться</h3>
               <div
                 className="w-full relative flex flex-wrap gap-5
               [&>a]:w-[calc(50%-10px)] [&>a>div]:h-[300px] [&>a>div]:1100res:h-[230px] [&>a>div]:w-full"
@@ -315,7 +315,7 @@ const WatchPage = () => {
         </div>
         <div className="flex flex-col gap-2 w-[45%] 1200res:w-[55%] 1000res:hidden">
           <div className="flex gap-1 items-center">
-            <p>Episode number:</p>
+            <p>Номер эпизода:</p>
             <form onSubmit={(e) => {
               e.preventDefault()
               console.log(e.target[0].value);
@@ -374,7 +374,7 @@ const WatchPage = () => {
                     {item.title === null ? "No title" : item.title}
                   </div>
                   <div className="text-sm text-text-gray">
-                    Episode {item?.number}
+                    Эпизод {item?.number}
                   </div>
                 </div>
               </div>

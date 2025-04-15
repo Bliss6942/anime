@@ -50,7 +50,7 @@ const AnimeCard = ({info, type}) => {
             )}
             {type === "recomm" ? (
               <p>
-                {info?.type.replace("_", " ")}, {info?.episodes} episodes
+                {info?.type.replace("_", " ")}, {info?.episodes} эпизоды
               </p>
             ) : (
               ""

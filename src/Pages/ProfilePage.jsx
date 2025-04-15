@@ -206,7 +206,7 @@ const ProfilePage = ({currentWidth}) => {
                             />
                             </svg>
                         </div>
-                        <p>Edit</p>
+                        <p>Редактировать</p>
                     </span>
                 : null}
             </div>
