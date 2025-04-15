@@ -189,20 +189,20 @@ const AdvancedSearchPage = () => {
     <div className="w-[1440px] mx-auto 1480res:w-full 1480res:m-0 1480res:px-5">
       <div className="flex 900res:flex-col 900res:gap-6 gap-10 justify-between mt-24 900res:mt-10">
         <div className="w-full flex-shrink min-w-[200px]"> 
-          <h2 className="text-3xl font-medium mb-8">Catalog</h2>          
+          <h2 className="text-3xl font-medium mb-8">Каталог</h2>          
           <CatologYearSelectComponent setYearOpened={setYearOpened} yearOpened={yearOpened}
             setYearValue={setYearValue} changeYear={changeYear} yearValue={yearValue}/>
           <CatalogCheckboxesComponent setBoxesOpened={setSeasonOpened} boxesOpened={seasonOpened}
-            componentHeight={162} mainTitle={"Season"} componentArray={seasons}
+            componentHeight={162} mainTitle={"Сезон"} componentArray={seasons}
             selectedBoxes={selectedSeason} changeSelectedBoxes={changeSeason} selectedBoxesIsArray={false}/>
           <CatalogCheckboxesComponent setBoxesOpened={setGenresOpened} boxesOpened={genresOpened}
-            componentHeight={666} mainTitle={"Genres"} componentArray={genres}
+            componentHeight={666} mainTitle={"Жанры"} componentArray={genres}
             selectedBoxes={selectedGenres} changeSelectedBoxes={changeGenres} selectedBoxesIsArray={true}/>
           <CatalogCheckboxesComponent setBoxesOpened={setFormatsOpened} boxesOpened={formatsOpened}
-            componentHeight={270} mainTitle={"Formats"} componentArray={formats}
+            componentHeight={270} mainTitle={"Форматы"} componentArray={formats}
             selectedBoxes={selectedFormat} changeSelectedBoxes={changeFormat} selectedBoxesIsArray={false}/>
           <CatalogCheckboxesComponent setBoxesOpened={setAiringStatusOpened} boxesOpened={airingStatusOpened}
-            componentHeight={198} mainTitle={"Airing Status"} componentArray={airingStatus}
+            componentHeight={198} mainTitle={"Статус издания"} componentArray={airingStatus}
             selectedBoxes={selectedAiringStatus} changeSelectedBoxes={changeAiringStatus} selectedBoxesIsArray={false}/>
         </div>
         <div className="flex-shrink-0">
@@ -264,7 +264,7 @@ const AdvancedSearchPage = () => {
                     />
                   </svg>
                 </span>
-                <span>Submit</span>
+                <span>Подтвердить</span>
               </div>
               <div
                 onClick={() => resetParams()}
@@ -285,7 +285,7 @@ const AdvancedSearchPage = () => {
                     />
                   </svg>
                 </span>
-                <span>Reset</span>
+                <span>Сбросить</span>
               </div>
               <div className="relative ">
                 <div className={` ${sortOpened ? "opacity-100" : "opacity-0 pointer-events-none"} duration-200 overflow-hidden absolute top-14 flex flex-col gap-2 p-3 right-0 bg-def-black border border-white/20 rounded-xl text-white w-[200px]`}>
