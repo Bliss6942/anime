@@ -155,6 +155,16 @@ const NavBar = () => {
                 Поиск манги
               </span>
             </li>
+            <li>
+              <NavLink
+                className={(param) =>
+                  param.isActive ? "text-white" : "text-silver/70"
+                }
+                to={"/about"}
+              >
+                О нас
+              </NavLink>
+            </li>
           </ul>
           <div className=''>
             {user?.isLoading ?

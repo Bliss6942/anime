@@ -15,6 +15,7 @@ import getUserData from './helpers/getUserData'
 import refreshAccessToken from './helpers/refreshAccessToken'
 import SettingsPage from './Pages/SettingsPage'
 import RefreshTokenIntervalContext from './Context/RefreshTokenIntervalContext'
+import AboutPage from './Pages/AboutPage'
 
 function App() {
   const [currentWidth, setCurrentWidth] = useState(0)
@@ -63,7 +64,8 @@ function App() {
             <Route path='/read/:id' element={<ReadPage/>}/>
             <Route path='/profile/:login' element={<ProfilePage currentWidth={currentWidth}/>}/>
             <Route path='/settings' element={<SettingsPage currentWidth={currentWidth}/>}/>
-          <Route path='*' element={<ErrorPage />}/>
+            <Route path='/about' element = {<AboutPage/>}/>
+            <Route path='*' element={<ErrorPage />}/>
           </Route>
         </Routes>
       </RefreshTokenIntervalContext.Provider>
