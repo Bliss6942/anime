@@ -75,8 +75,8 @@ const ProfilePage = ({currentWidth}) => {
         }
         setIsDeleteLoading(true)
         axios.delete(`https://four04nime.onrender.com/users/me/${route}`, {headers: {"Authorization": `Bearer ${localStorage.getItem("JWTAccess")}`}})
-        .then(res => {setValue(res.data); throwNotification("Deleted successfully")})
-        .catch(err => throwNotification(err.response?.data?.message ? err.response?.data?.message : "Unexpected error"))
+        .then(res => {setValue(res.data); throwNotification("Успешно удалено")})
+        .catch(err => throwNotification(err.response?.data?.message ? err.response?.data?.message : "Непредвиденная ошибка"))
         .finally(() => setIsDeleteLoading(false))
     }
 
@@ -123,7 +123,7 @@ const ProfilePage = ({currentWidth}) => {
         <MoreInfoBanner user={user} isUserAuth={user.login === userContext.user.login} currentWidth={currentWidth}/>
         <div className='w-[1440px] mx-auto 1480res:w-full'>
             <div className='relative py-10 pr-20 1480res:p-[2.5rem_5rem_2.5rem_2.5rem] 500res:p-[2.5rem_1.25rem_2.5rem_1.25rem] 700res:p-10 h-full flex justify-between items-center gap-[10px]'>
-                <div className={`${showModal ? "opacity-100" : ""} duration-300 absolute top-10 left-1/2 -translate-x-1/2 p-5 500res:text-sm 500res:p-3 bg-green-500 rounded-xl opacity-0 pointer-events-none`}>Copied to clipboard.</div>
+                <div className={`${showModal ? "opacity-100" : ""} duration-300 absolute top-10 left-1/2 -translate-x-1/2 p-5 500res:text-sm 500res:p-3 bg-green-500 rounded-xl opacity-0 pointer-events-none`}>Скопировано</div>
                 <div className='flex gap-10 500res:gap-7 items-center w-full 700res:flex-col 700res:items-center'>
                     <img src={user?.avatar} alt="user-avatar" className='flex-shrink-0 rounded-full w-[170px] h-[170px] 900res:w-[150px] 900res:h-[150px] 500res:w-[140px] 500res:h-[140px]'/>
                     <div className='w-full overflow-hidden 700res:flex 700res:items-center 700res:flex-col'>
