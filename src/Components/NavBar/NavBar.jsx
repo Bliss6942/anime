@@ -172,26 +172,6 @@ const NavBar = () => {
             :
               (user?.isValid ? 
                 <div className='650res:flex hidden items-center justify-center gap-5 500res:gap-3'>
-                  <div className='cursor-pointer duration-200 flex items-center justify-center gap-2 font-light text-sm text-silver/70 [&_path]:fill-silver/70 hover:text-white [&_path]:hover:fill-white'>
-                    <span>Библиотека</span>
-                    <span>
-                      <svg
-                        className={`w-5 h-5`}
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M3.29289 7.29289C3.68342 6.90237 4.31658 6.90237 4.70711 7.29289L12 14.5858L19.2929 7.29289C19.6834 6.90237 20.3166 6.90237 20.7071 7.29289C21.0976 7.68342 21.0976 8.31658 20.7071 8.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L3.29289 8.70711C2.90237 8.31658 2.90237 7.68342 3.29289 7.29289Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </span>
-                  </div>
                   <Link to={`/profile/${user?.login}`}>
                     <img src={user?.avatar} alt="user-avatar" className='cursor-pointer flex-shrink-0 rounded-full w-[44px] h-[44px]'/>
                   </Link>
@@ -285,26 +265,6 @@ const NavBar = () => {
           :
             (user?.isValid ? 
               <div className='flex items-center justify-center gap-7 1200res:gap-5 650res:hidden'>
-                <div className='cursor-pointer duration-200 flex items-center justify-center gap-2  text-silver/70 [&_path]:fill-silver/70 hover:text-white [&_path]:hover:fill-white'>
-                  <span>Библиотека</span>
-                  <span>
-                    <svg
-                      className={`w-5 h-5`}
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M3.29289 7.29289C3.68342 6.90237 4.31658 6.90237 4.70711 7.29289L12 14.5858L19.2929 7.29289C19.6834 6.90237 20.3166 6.90237 20.7071 7.29289C21.0976 7.68342 21.0976 8.31658 20.7071 8.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L3.29289 8.70711C2.90237 8.31658 2.90237 7.68342 3.29289 7.29289Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                </div>
                 <Link to={`/profile/${user?.login}`}>
                   <img src={user?.avatar} alt="user-avatar" className='cursor-pointer flex-shrink-0 rounded-full w-[44px] h-[44px]'/>
                 </Link>
