@@ -81,7 +81,7 @@ const AdvancedSearchPage = () => {
   const [searchResult, setSearchResult] = useState(null)
   const [searchParams, setSearchParams] = useState({
     page: 1,
-    perPage: 15,
+    perPage: 45,
     season: null,
     sort: '["POPULARITY_DESC"]',
     year: null,
