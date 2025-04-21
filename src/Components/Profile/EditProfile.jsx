@@ -120,11 +120,11 @@ const EditProfile = ({currentWidth}) => {
                 <span>Изменить</span>
                 <input accept='image/jpeg, image/png, image/gif' className='w-full h-full absolute top-0 left-0 opacity-0 cursor-pointer' type="file" onChange={e => handleChangeImage(e, setNewAvatar, false)}/>
               </div>
-              <span className='text-sm text-white/70 500res:text-xs'>{"Img only"}</span>
+              <span className='text-sm text-white/70 500res:text-xs'>{"Только картинка"}</span>
             </div>          </div>
         </div>
         <div className='mb-10'>
-          <div className='text-sm text-white/70 mb-2'>{`Cover ( min 1280x220 )`}</div>
+          <div className='text-sm text-white/70 mb-2'>{`Обложка ( минимум 1280x220 )`}</div>
           <div className='flex items-center gap-4 1000res:flex-col 1000res:items-start 1000res:gap-5'>
             <div style={{backgroundImage: `url(${newCover})`, height: `calc(${currentWidth - 60}px / 5.818181)`}}
               className={`${currentWidth <= 1000 ? "600res:!h-[93px]" : "!h-[137px]"} 1000res:w-full w-[800px] rounded-md bg-center bg-cover bg-no-repeat`}></div>
@@ -133,18 +133,18 @@ const EditProfile = ({currentWidth}) => {
                 <span>Изменить</span>
                 <input accept='image/jpeg, image/png, image/gif' className='w-full h-full absolute top-0 left-0 opacity-0 cursor-pointer' type="file" onChange={e => handleChangeImage(e, setNewCover, true)}/>
               </div>
-              <span className='text-sm text-white/70 500res:text-xs'>{"Img only"}</span>
+              <span className='text-sm text-white/70 500res:text-xs'>{"Только картинка"}</span>
             </div>
           </div>
         </div>
         <div className='max-w-[500px] flex flex-col gap-0'>
-          <AuthorizationInput type={"text"} placeholder={user?.name} title={"Username"} setValue={setNewName} value={newName}/>
+          <AuthorizationInput type={"text"} placeholder={user?.name} title={"Имя профиля"} setValue={setNewName} value={newName}/>
           <div className='my-3'>
-            <div className='text-sm text-white/70 mb-2'>Bio</div>
+            <div className='text-sm text-white/70 mb-2'>Описание</div>
             <div className='border-solid border-[2px] border-white/20 flex p-3 rounded-[10px] bg-transparent duration-300 items-center'>
-              <textarea placeholder="Your new bio..." className='w-full h-full bg-transparent outline-none placeholder:font-normal placeholder:text-white/40 text-white' value={newBio} maxLength={500} onChange={e => setNewBio(e.target.value)} rows="5" cols="20"></textarea>
+              <textarea placeholder="Твое новое описание..." className='w-full h-full bg-transparent outline-none placeholder:font-normal placeholder:text-white/40 text-white' value={newBio} maxLength={500} onChange={e => setNewBio(e.target.value)} rows="5" cols="20"></textarea>
             </div>
-          </div>
+          </div>Cover
           <div className={`${isLoading ? "animate-pulse" : ""} flex gap-3 my-5`}>
             <button className={`${imageIsLoading || isNothingChanged ? "btn-disabled" : ""} ${!confirmSave ? "bg-white text-def-black" : "bg-green-500 text-white"} btn-base`}
               onClick={(e) => {
@@ -153,7 +153,7 @@ const EditProfile = ({currentWidth}) => {
                 }
                 setConfirmSave(true)
               }}
-            >{confirmSave ? "Confirm changes" : "Save"}</button>
+            >{confirmSave ? "Подтвердить изменения" : "Сохранить"}</button>
             <button className={`${imageIsLoading || isNothingChanged ? "btn-disabled" : ""} btn-base bg-def-gray text-white`}
               onClick={() => {
                 if(confirmSave) {

@@ -79,10 +79,10 @@ const ManageAccount = () => {
 
   return (
     <div className={`${isLoading ? "pointer-events-none" : ""} flex flex-col w-[1440px] 1480res:w-full mx-auto 1480res:pl-5 600res:pl-0`}>
-        <h2 className='text-4xl font-medium my-10 600res:pl-0 500res:text-3xl'>Управлять акканутом</h2>
+        <h2 className='text-4xl font-medium my-10 600res:pl-0 500res:text-3xl'>Настроить аккаунт</h2>
         <div className='max-w-[500px] flex flex-col gap-0'>
-          <AuthorizationInput type={"text"} placeholder={user?.login} title={"Login"} setValue={setNewLogin} value={newLogin}/>
-          <AuthorizationInput type={"password"} placeholder={"New Password"} title={"New Password"} setValue={setNewPassword} value={newPassword}/>
+          <AuthorizationInput type={"text"} placeholder={user?.login} title={"Логин"} setValue={setNewLogin} value={newLogin}/>
+          <AuthorizationInput type={"password"} placeholder={"Новый пароль"} title={"Новый пароль"} setValue={setNewPassword} value={newPassword}/>
           {newPassword.length > 0 ?
             <>
                 <AuthorizationInput type={"password"} placeholder={"Confirm Password"} title={"Confirm Password"} setValue={setConfirmNewPassword} value={confirmNewPassword}/>
@@ -95,7 +95,7 @@ const ManageAccount = () => {
                 if(confirmSave) handleSaveChanges()
                 else setConfirmSave(true)
               }}
-            >{confirmSave ? "Confirm changes" : "Save"}</button>
+            >{confirmSave ? "Подтвердить изменения" : "Сохранить"}</button>
             <button className={`${!isNothingChanged || (newPassword === confirmNewPassword && newPassword.length > 0) ? "" : "btn-disabled"} btn-base bg-def-gray text-white`}
               onClick={() => handleResetChanges()}
             >Сбросить</button>
