@@ -25,7 +25,7 @@ const Registration = ({isShow, close, toggleAuth}) => {
             password: password
         })
         .then((res) => {
-            setSuccessText("Your account has been created")
+            setSuccessText("Ваш аккаунт был зарегистрирован")
             setErrorText("")
             setIsLoading(false)
             localStorage.setItem("JWTAccess", res.data.accessToken)

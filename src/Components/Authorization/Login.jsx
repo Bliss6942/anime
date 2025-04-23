@@ -23,7 +23,7 @@ const Login = ({isShow, close, toggleAuth}) => {
             password: password
         })
         .then((res) => {
-            setSuccessText("Succesfuly logined")
+            setSuccessText("Вы успешно авторизованы")
             setErrorText("")
             setIsLoading(false)
             localStorage.setItem("JWTAccess", res.data.accessToken)
