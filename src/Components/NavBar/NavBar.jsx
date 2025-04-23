@@ -277,7 +277,7 @@ const NavBar = () => {
                 </button>
                 <button onClick={() => {setIsShowRegistration(true)}}
                 className="btn-base bg-white text-def-black cursor-pointer">
-                  Регистрация Attack
+                  Регистрация
                 </button>
               </div>
             )

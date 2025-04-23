@@ -139,6 +139,8 @@ const AdvancedSearchPage = () => {
     setSelectedSort(newSort)
   }
 
+  
+
   const fetchAnime = () => {
     setPreloader(true)
     setIsLoaded(true)
@@ -164,7 +166,7 @@ const AdvancedSearchPage = () => {
   const resetParams = () => {
     setSearchParams({
       page: 1,
-      perPage: 15,
+      perPage: 69,
       season: null,
       sort: '["POPULARITY_DESC"]',
       year: null,
